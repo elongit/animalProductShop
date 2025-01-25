@@ -35,7 +35,7 @@ function Header() {
 
   return (
     <header className="shadow p-3 relative md:text-lg flex justify-between items-center">
-      <h1 className="text-primary-color font-bold text-4xl flex">
+      <h1 className="text-primary-color font-bold text-4xl ">
         <NavLink to="/" aria-label="Home">
           <img
             src="https://cdn-icons-png.flaticon.com/512/8334/8334173.png"
