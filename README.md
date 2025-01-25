@@ -1,8 +1,8 @@
-# React + Vite
+# Doctor appointment app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+To run this project you have to do steps below :
+- move to (my-app) folder and run those following command:
+ - npm i (to install required package)
+ - npm run watch (to run tailwindcss and build your css)
+ - npm run dev (to run the devlopment)
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
