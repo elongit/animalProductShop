@@ -1,4 +1,4 @@
-# Doctor appointment app
+# Animal shop product app
 
 To run this project you have to do steps below :
 - move to (my-app) folder and run those following command:
