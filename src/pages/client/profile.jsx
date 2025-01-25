@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Sidebar from "../../features/profile/components/sidebar";
+import Sidebar from "../../features/profile/components/sideBar";
 import ProfileForm from "../../features/profile/components/profile";
 import BillingForm from "../../features/profile/components/BillingForm";
 
