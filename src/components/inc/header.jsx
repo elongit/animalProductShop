@@ -6,6 +6,7 @@ import { useSelector , useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
 import { logout } from "../../features/auth/authSlice";
 import { useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";
 
 function Header() {
   const items = useSelector(selectCartItems);
@@ -18,20 +19,24 @@ function Header() {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   
 
-  // Close mobile menu on route change
-  useEffect(() => {
-    setIsOpen(false);
-  }, [pathname]);
+    const isAuth = useSelector((state) => state.auth);
+    const users = isAuth.users;
+    const token = Cookies.get("token");
+    const user = users.find((user) => user.token === token);
 
-  const handleIsOpen = () => {
-    setIsOpen((prev) => !prev);  // Toggle mobile menu
-  };
-  const handleLogout = () => {
-    dispatch(logout()); // Clear token and update state
-    navigate('/')
+      // Close mobile menu on route change
+    useEffect(() => {
+      setIsOpen(false);
+    }, [pathname]);
 
-  };
+    const handleIsOpen = () => {
+      setIsOpen((prev) => !prev);  // Toggle mobile menu
+    };
+    const handleLogout = () => {
+      dispatch(logout()); // Clear token and update state
+      navigate('/')
 
+    };
 
   return (
     <header className="shadow p-3 relative md:text-lg flex justify-between items-center">
@@ -87,7 +92,7 @@ function Header() {
                 <ul className="absolute text-sm w-36 text-left bg-white shadow-md rounded mt-2 py-2 z-50">
                   <li>
                     <NavLink
-                      to="/profile"
+                      to={`/profile/${user?.id}`}
                       aria-label="View Profile"
                       className="block px-4 py-2 text-gray-700 hover:bg-gray-200"
                     >
