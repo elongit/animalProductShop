@@ -40,7 +40,7 @@ const AppContent = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  const showHeaderFooter = pathname !== '/profile' && pathname !== "/signup" && pathname !== "/checkout";
+  const showHeaderFooter =pathname !== '/dash' && pathname !== '/profile' && pathname !== "/signup" && pathname !== "/checkout";
 
   return (
     <>
@@ -59,14 +59,16 @@ const AppContent = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/signUp" element={<SignUp />} />
-        <Route path="/profile" element={<Profile />} />
         {/* Protected Routes */}
         <Route path="/" element={<IsPrivate />}>
+        <Route path="/profile/:id" element={<Profile />} />
           <Route path="/checkout" element={<CheckOutForm />} />
           <Route path="/orderHistory" element={<OrderHistory />} />
           <Route path="/orderconfirmed" element={<OrderConfirmation />} />
 
         </Route>
+
+        
 
         <Route path="*" element={<NotFound />} />
       </Routes>
