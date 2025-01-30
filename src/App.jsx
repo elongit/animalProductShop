@@ -19,6 +19,7 @@ import Profile from "./pages/client/profile";
 import NotFound from "./pages/404";
 import OrderConfirmation from "./pages/client/confirmationPage";
 import IsPrivate from "./components/isPrivate";
+import Dashboard from "./pages/admin/dash";
 
 function App() {
  
@@ -40,7 +41,7 @@ const AppContent = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  const showHeaderFooter =pathname !== '/dash' && pathname !== '/profile' && pathname !== "/signup" && pathname !== "/checkout";
+  const showHeaderFooter =pathname !== "/Dashboard" && pathname !== "/signup" && pathname !== "/checkout";
 
   return (
     <>
@@ -65,6 +66,8 @@ const AppContent = () => {
           <Route path="/checkout" element={<CheckOutForm />} />
           <Route path="/orderHistory" element={<OrderHistory />} />
           <Route path="/orderconfirmed" element={<OrderConfirmation />} />
+          <Route path="/Dashboard" element={<Dashboard  />} />
+
 
         </Route>
 
