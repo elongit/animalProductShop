@@ -16,8 +16,9 @@ const OrderHistory = () => {
               <th className="px-3 md:px-6 py-3">Category</th>
               <th className="px-3 md:px-6 py-3">Quantity</th>
               <th className="px-3 md:px-6 py-3">Total price</th>
-              <th className="px-3 md:px-6 py-3">Status</th>
               <th className="px-3 md:px-6 py-3">Token</th>
+              <th className="px-3 md:px-6 py-3">Status</th>
+            
               
             </tr>
           </thead>
