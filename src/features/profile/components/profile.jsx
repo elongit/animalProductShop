@@ -13,6 +13,8 @@ export default function ProfileForm() {
   const navigate = useNavigate();
 
   const user = users.find((user) => user.id === id);
+  console.log(users);
+  
 
   const [formData, setFormData] = useState({
     id: '',
