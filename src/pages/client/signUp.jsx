@@ -13,11 +13,11 @@ function SignUp() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    name: 'oussama',
-    username: 'oussama11',
-    email: 'oussama11@gmail.com',
-    password: '12345678',
-    confirmePassword: '12345678',
+    name: '',
+    username: '',
+    email: '',
+    password: '',
+    confirmePassword: '',
   });
   const [errors, setErrors] = useState([]);
 
