@@ -36,12 +36,10 @@ const userSlice = createSlice({
         );
     
         if (user) {
-          // Mark as authenticated and set a token
           state.isAuthenticated = true;
-          Cookies.set("token", user.token); // Use the user's token set during sign-up
-          state.error = null; // Clear any previous errors
+          Cookies.set("token", user.token); 
+          state.error = null; 
         } else {
-          // Set an error message in the state
           state.isAuthenticated = false;
           state.error = "Invalid username or password";
         }
