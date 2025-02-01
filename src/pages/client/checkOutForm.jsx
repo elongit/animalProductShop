@@ -119,7 +119,7 @@ const CheckOutForm = () => {
     const { name, value, checked, type } = e.target;
     setFormData({
       ...formData,
-      [name]: type === "checkbox" ? !checked : value,
+      [name]: type === "checkbox" ? checked : value,
     });
   };
   return (
