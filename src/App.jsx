@@ -20,6 +20,8 @@ import NotFound from "./pages/404";
 import OrderConfirmation from "./pages/client/confirmationPage";
 import IsPrivate from "./components/isPrivate";
 import Dashboard from "./pages/admin/dash";
+import AddProduct from "./pages/admin/addProduct";
+import EditProduct from "./pages/admin/editProduct";
 
 function App() {
  
@@ -41,7 +43,7 @@ const AppContent = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  const showHeaderFooter =pathname !== "/Dashboard" && pathname !== "/signup" && pathname !== "/checkout";
+  const showHeaderFooter =pathname !== "/Dashboard" && pathname !== "/addProduct" && pathname !== "/signup" && pathname !== "/checkout";
 
   return (
     <>
@@ -67,7 +69,8 @@ const AppContent = () => {
           <Route path="/orderHistory" element={<OrderHistory />} />
           <Route path="/orderconfirmed" element={<OrderConfirmation />} />
           <Route path="/Dashboard" element={<Dashboard  />} />
-
+          <Route path="/addProduct" element={<AddProduct />} />
+          <Route path="/editProduct" element={<EditProduct />} />
 
         </Route>
 
