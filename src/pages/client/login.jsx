@@ -14,8 +14,8 @@ function Login() {
   const from = location.state?.from?.pathname || "/";
 
   const [formData, setFormData] = useState({
-    username: "oussama11",
-    password: "12345678",
+    username: "",
+    password: "",
   });
   const [errors, setErrors] = useState([]);
 

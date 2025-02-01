@@ -18,7 +18,7 @@ export default function Dashboard() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             <div className="p-10 bg-slate-200 rounded shadow-md hover:bg-slate-300 transition-all">
               <h3 className="text-lg font-bold">Total Products</h3>
-              <p className="text-2xl font-semibold">120</p>
+              <p className="text-2xl font-semibold">20</p>
             </div>
 
             <div className="p-10 bg-slate-200 rounded shadow-md hover:bg-slate-300 transition-all">
@@ -28,7 +28,7 @@ export default function Dashboard() {
 
             <div className="p-10 bg-slate-200 rounded shadow-md hover:bg-slate-300 transition-all">
               <h3 className="text-lg font-bold">Total Customers</h3>
-              <p className="text-2xl font-semibold">85</p>
+              <p className="text-2xl font-semibold">15git  </p>
             </div>
           </div>
         )}
