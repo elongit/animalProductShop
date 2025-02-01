@@ -1,15 +1,23 @@
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { logout } from "../../auth/authSlice";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import {
   faUser,
   faHome,
   faSignOut,
   faGear,
   faPaw,
-  faShoppingCart,
 } from "@fortawesome/free-solid-svg-icons";
 
 function AdminSideBar({ activeSection, setActiveSection }) {
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const logOut = ()=>{
+    dispatch(logout()); // Clear token and update state
+    navigate("/");
+  }
   return (
     <aside
       className="grid grid-cols-1 gap-0 h-[100vh] sticky top-5 "
@@ -43,8 +51,8 @@ function AdminSideBar({ activeSection, setActiveSection }) {
           <NavItem
             label="Product Management"
             icon={faPaw}
-            isActive={activeSection === "productManagement"}
-            onClick={() => setActiveSection("productManagement")}
+            isActive={activeSection === "animalManagement"}
+            onClick={() => setActiveSection("animalManagement")}
           />
           <NavItem
             label="Settings"
@@ -55,7 +63,7 @@ function AdminSideBar({ activeSection, setActiveSection }) {
 
           {/* Sign Out */}
           <li className="py-2 px-4 hover:bg-white hover:mt-2 transition-all">
-            <button>
+            <button onClick={logOut}>
               <FontAwesomeIcon icon={faSignOut} /> Sign Out
             </button>
           </li>
