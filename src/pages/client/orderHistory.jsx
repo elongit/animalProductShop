@@ -25,8 +25,8 @@ const OrderHistory = () => {
           <tbody>
           {Orders.map((order, index) => (
             order.items.map((product, productIndex) => (
-              <tr key={`${index}-${productIndex}`} className="text-black border-b border-primary-color text-sm md:text-lg">
-                <th className="px-6 py-4">{order.orderNumber}</th>
+              <tr key={`${index}-${productIndex}`} className="text-black border-b border-slate-200 text-sm md:text-lg">
+                <td className="px-6 py-4">{order.orderNumber}</td>
                 <td className="px-6 py-4">{order.orderDate}</td>
                 <td className="px-6 py-4">{product.name}</td>
                 <td className="px-6 py-4">{product.category}</td>
