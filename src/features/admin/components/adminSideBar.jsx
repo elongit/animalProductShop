@@ -51,8 +51,8 @@ function AdminSideBar({ activeSection, setActiveSection }) {
           <NavItem
             label="Product Management"
             icon={faPaw}
-            isActive={activeSection === "animalManagement"}
-            onClick={() => setActiveSection("animalManagement")}
+            isActive={activeSection === "productManagement"}
+            onClick={() => setActiveSection("productManagement")}
           />
           <NavItem
             label="Settings"
